@@ -43,14 +43,15 @@ app.use(express.json())
 
 app.use(require('express-session')({
   secret: 'This is a secret',
-  cookie: { httpOnly: true, 
+  cookie: { 
+    httpOnly: true, 
     secure: true, 
     maxAge: 1000 * 60 * 60 * 48, 
     sameSite: 'none' 
   },
   store: store,
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: true
 }));
 
   app.use((req, res, next) => {
