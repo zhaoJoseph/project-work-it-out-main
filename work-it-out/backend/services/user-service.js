@@ -15,6 +15,8 @@ const { ObjectId } = require("mongodb");
 
 const SALT = 10;
 
+const FRONTEND_URL = process.env.FRONTEND_URL;
+
 const oAuth2Client = new google.auth.OAuth2(
 	process.env.GOOGLE_CLIENT_ID,
 	process.env.GOOGLE_CLIENT_SECRET,
@@ -479,7 +481,7 @@ module.exports = {
     async activateCode(redirectUrl, id) {
       try {
         const { code } = url.parse(redirectUrl, true).query;
-        const { tokens } = await oAuth2Client.getToken({code, redirect_uri : 'http://localhost:5173'});
+        const { tokens } = await oAuth2Client.getToken({code, redirect_uri : `${FRONTEND_URL}`});
         await User.updateOne({'_id' : id}, {syncActive : true, refreshToken: tokens.refresh_token, gfitToken: tokens.access_token});
         const newUser = await User.findById(id);
         return new Response("Success", 200, "Access granted!",{user : newUser});

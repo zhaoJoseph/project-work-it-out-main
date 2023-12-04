@@ -11,6 +11,8 @@ const sessionsRouter = require('./routes/session-routes');
 const session = require('express-session')
 const MongoDBStore = require('connect-mongodb-session')(session);
 
+const FRONTEND_URL = process.env.FRONTEND_URL;
+
 const store = new MongoDBStore({
     uri: config.MONGODB_URI,
     collection: 'mySessions'
@@ -31,7 +33,7 @@ mongoose.connect(config.MONGODB_URI)
     })
 
 app.use(cors({
-    origin: "http://localhost:5173", // allow to server to accept request from different origin
+    origin: `${FRONTEND_URL}`, // allow to server to accept request from different origin
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // allow session cookie from browser to pass through
 }))
