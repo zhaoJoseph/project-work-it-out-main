@@ -43,5 +43,3 @@ Work-It-Out is a fitness web app that accompanies users on their fitness journey
 * creating charts to measure user performance using chart.js
 * real-time messaging between users
 * incorporating AI to track user progress
-
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/KRLE_tfD)
