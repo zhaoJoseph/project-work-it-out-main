@@ -53,6 +53,7 @@ module.exports = {
         serialize("email", user.email, {
           path: "/",
           maxAge: 60 * 60 * 24 * 7,
+          sameSite: "none"
         }),
       );
       req.session.user = user;
