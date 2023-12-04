@@ -73,6 +73,11 @@ app.use(require('express-session')({
     next();
   });
 
+  app.use((req, res, next) => {
+    console.log(req.session);
+    next();
+  });
+
 app.use('/user', usersRouter);
 app.use('/session', sessionsRouter);
 

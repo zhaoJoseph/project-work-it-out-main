@@ -58,6 +58,7 @@ module.exports = {
       );
       req.session.user = user;
       await req.session.saveAsync();
+      console.log(req.session);
     }
       return res.json(sendBody);
   },
