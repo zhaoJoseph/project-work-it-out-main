@@ -48,7 +48,6 @@ app.use(require('express-session')({
     secure: true, 
     maxAge: 1000 * 60 * 60 * 48, 
     sameSite: 'none',
-    domain: '.domain.com'
   },
   store: store,
   resave: false,

@@ -54,7 +54,6 @@ module.exports = {
           path: "/",
           maxAge: 60 * 60 * 24 * 7,
           sameSite: "none",
-          domain: '.domain.com'
         }),
       );
       req.session.user = user;
