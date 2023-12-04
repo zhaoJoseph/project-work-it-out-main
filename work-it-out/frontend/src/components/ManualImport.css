@@ -1,0 +1,117 @@
+body {
+    color: white;
+}
+
+
+
+.exercise-titles {
+    display: flex;
+    flex-direction: row;
+}
+
+.exercise-titles > * {
+    margin: 50px;
+}
+
+.select {
+    color: black;
+}
+
+.set-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.first-set-cardio {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+
+.first-set-cardio > h2 {
+    font-size: 29px;
+    display: inline-block;
+    margin:0;
+}
+
+.first-set-cardio > input {
+    margin:0;
+    font-size: 35px;
+    padding: 10px 40px;
+    width: 100px;
+    max-height: 20px;
+    display: inline-block;
+    vertical-align:top;
+    margin-left: 100px;
+}
+
+
+.first-set {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+
+.first-set > h2 {
+    font-size: 29px;
+    display: inline-block;
+    margin:0;
+}
+
+.first-set > input {
+    margin:0;
+    font-size: 35px;
+    padding: 10px 40px;
+    width: 100px;
+    max-height: 20px;
+    display: inline-block;
+    vertical-align:top;
+    margin-left: 50px;
+}
+
+.last-set > * {
+    margin:0;
+    font-size: 35px;
+    padding: 10px 40px;
+    width: 100px;
+    max-height: 20px;
+    display: inline-block;
+    vertical-align:top;
+    margin-left: 90px;
+}
+
+.time-container-cardio > * {
+    width: 50px;
+    min-height: 40px;
+    margin-left: 10px;
+}
+
+.time-container-cardio {
+    margin-left: 200px;
+}
+
+.last-set-cardio > * {
+    margin:0;
+    font-size: 35px;
+    padding: 10px 40px;
+    width: 100px;
+    max-height: 20px;
+    display: inline-block;
+    vertical-align:top;
+    margin-left: 100px;
+}
+
+.delete {
+    height: 40px;
+}
+
+.time-container > * {
+    width: 50px;
+    min-height: 40px;
+    margin-left: 10px;
+}
+
+.input {
+    height: 20px;
+    max-width: 90px;
+}

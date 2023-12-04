@@ -1,0 +1,9 @@
+.exercise-list-container {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 20px;
+}

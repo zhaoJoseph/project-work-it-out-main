@@ -1,0 +1,8 @@
+.show-counter {
+    display: flex;
+    flex-direction: grid;
+}
+
+.show-counter > * {
+    margin-right: 50px;
+}
