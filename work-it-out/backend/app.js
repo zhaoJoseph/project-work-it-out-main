@@ -44,10 +44,9 @@ app.use(express.json())
 app.use(require('express-session')({
     secret: 'This is a secret',
     cookie: {
-        sameSite: 'none',
-        secure: true,
         maxAge: 6000000,
-        path: '/'
+        path: '/',
+        httpOnly: false
     },
     store: store,
     resave: false,
