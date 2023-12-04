@@ -42,16 +42,16 @@ app.use(cors({
 app.use(express.json())
 
 app.use(require('express-session')({
-    secret: 'This is a secret',
-    cookie: {
-        maxAge: 6000000,
-        path: '/',
-        httpOnly: false
-    },
-    store: store,
-    resave: false,
-    saveUninitialized: true
-  }));
+  secret: 'This is a secret',
+  cookie: {
+      secure: true,
+      maxAge: 6000000,
+      path: '/'
+  },
+  store: store,
+  resave: false,
+  saveUninitialized: false
+}));
 
   app.use((req, res, next) => {
     // CORS headers
