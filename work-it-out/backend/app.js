@@ -60,7 +60,7 @@ app.use(require('express-session')({
   });
 
   app.use((req, res, next) => {
-    console.log(req.session);
+    console.log(req);
     next();
   });
 
