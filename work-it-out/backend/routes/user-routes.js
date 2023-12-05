@@ -21,13 +21,13 @@ usersRouter.post('/:id/activate', userController.activate)
 usersRouter.get('/is-verified/:email', userController.isVerified)
 
 /* PUT user */
-usersRouter.put('/:id', isAuthenticated, userController.update)
+usersRouter.put('/:id',  userController.update)
 
 /** SIGNOUT */
 usersRouter.get('/signout', userController.signout);
 
 /** DELETE */
-usersRouter.delete('/:id', isAuthenticated, userController.delete)
+usersRouter.delete('/:id',  userController.delete)
 
 /** SEND 2FA TOKEN */
 usersRouter.post('/sendcode', userController.send2fa);
@@ -39,13 +39,13 @@ usersRouter.post('/resendcode', userController.resend2fa);
 usersRouter.post('/verifycode', userController.verify2fa);
 
 /** DISABLE 2FA */
-usersRouter.post('/disable2fa', isAuthenticated, userController.disable2fa);
+usersRouter.post('/disable2fa',  userController.disable2fa);
 
 /** DISABLE 2FA REQUEST */
-usersRouter.post('/disable2farequest', isAuthenticated, userController.disable2faRequest);
+usersRouter.post('/disable2farequest',  userController.disable2faRequest);
 
 /** CANCEL 2FA DISABLE REQUEST */
-usersRouter.post('/canceldisable2fa', isAuthenticated, userController.cancelDisable2fa);
+usersRouter.post('/canceldisable2fa',  userController.cancelDisable2fa);
 
 /** GET PHONE NUMBER */
 usersRouter.get('/:id/phonenumber', userController.getNumber);

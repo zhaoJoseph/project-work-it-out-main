@@ -3,8 +3,8 @@ const sessionController = require('../controllers/session-controller');
 const { isAuthenticated } = require('../utils/middleware');
 
 /**CREATE SESSION */
-sessionsRouter.post('/', isAuthenticated, sessionController.createSession);
+sessionsRouter.post('/',  sessionController.createSession);
 
-sessionsRouter.get('/:id/period', isAuthenticated, sessionController.getSessionsPeriod);
+sessionsRouter.get('/:id/period',  sessionController.getSessionsPeriod);
 
 module.exports = sessionsRouter
